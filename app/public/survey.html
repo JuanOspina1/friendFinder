@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/materia/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="javascript/survey.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">   
+        <div class="nav">
+            <a href="/">Home</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+            <h1>Answer These Questions to Find Your Match</h1>
+        <hr>
+        <div class="col-md-12"></div>
+        <form>
+            <!--Basic questionnaire-->
+            <h2>Your Info</h2>
+            <div class="form-group">
+                <label for="userName">Your Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="Your name here">
+            </div>
+            <div class="form-group">
+                <label for="imageLink">Your Photo</label>
+                <input type="url" class="form-control" id="imageLink" placeholder="http://flickr.com/image.png">
+            </div>
+            <hr>
+            <!-- Questions will be inserted here. -->
+            <h2>Personality Test</h2>
+            <div id="questions"></div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">   
+        <hr>
+        <!--Links to data API and GitHub-->
+        <footer>
+        <p>
+            <span><a href="/api/friends">API Friend List</a>
+        </p>
+        </footer>
+    </div>
+    </div>
+    </div>   
+        <!-- Modals -->
+        <div id="errorModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg"> 
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Error!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Please enter your name and a link to a photo of you.</h4>
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+ 
+    <div id="resultModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Your best match!</h4>
+                </div>
+                <div class="modal-body" id="modalContent"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

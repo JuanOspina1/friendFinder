@@ -1,0 +1,2 @@
+//default profile, so it works for first user & testing.
+module.exports = [{"name":"OJ Simpson","photo":"https://fortunedotcom.files.wordpress.com/2017/10/oj-simpson-release.jpg","answers":["1","2","3","4","5","1","2","3","4","5"]}];
